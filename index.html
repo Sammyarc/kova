@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kova — One account for people who live in two countries</title>
+  <meta name="description" content="Kova is one account for every currency you live in. Get paid in pounds, send naira home in seconds at the real rate, and save in dollars at 4.6% AER.">
+  <meta name="theme-color" content="#f6f2ec">
+
+  <!-- Placeholder domain: replace https://kova.example.com/ in the 4 absolute URLs below once the site is live -->
+  <link rel="canonical" href="https://kova.example.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kova">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://kova.example.com/">
+  <meta property="og:title" content="Kova — Two countries. One account.">
+  <meta property="og:description" content="Get paid in pounds, send naira home in seconds and save in dollars, all from one account.">
+  <meta property="og:image" content="https://kova.example.com/assets/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Kova home page: the headline Two countries. One account. beside a woman smiling at her phone, with balance and transfer cards around her.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kova — Two countries. One account.">
+  <meta name="twitter:description" content="Get paid in pounds, send naira home in seconds and save in dollars, all from one account.">
+  <meta name="twitter:image" content="https://kova.example.com/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="The Kova home page: the headline Two countries. One account. beside a woman smiling at her phone, with balance and transfer cards around her.">
+
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/photos/hero.webp" as="image" type="image/webp" imagesrcset="assets/photos/hero-sm.webp 720w, assets/photos/hero.webp 1120w" imagesizes="(max-width: 1023px) 100vw, 560px" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Hide the hero copy only until the intro plays; never longer than 2.5s if a script fails. */
+    (function (d) {
+      var c = d.documentElement.classList; c.add('js');
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { c.add('anim-pending'); setTimeout(function () { c.remove('anim-pending'); }, 2500); }
+    })(document);
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <!-- Kova mark: two linked rings, one for each home -->
+  <symbol id="logo-mark" viewBox="0 0 48 48"><rect width="48" height="48" rx="14" fill="#155e3d"/><circle cx="19" cy="24" r="9" fill="none" stroke="#f6f2ec" stroke-width="4.6"/><circle cx="29" cy="24" r="9" fill="none" stroke="#a6dfbd" stroke-width="4.6"/><path d="M18.215 15.034A9 9 0 0 1 27.345 20.629" fill="none" stroke="#155e3d" stroke-width="7.8"/><path d="M17.437 15.137A9 9 0 0 1 27.56 21.219" fill="none" stroke="#f6f2ec" stroke-width="4.6" stroke-linecap="round"/><path d="M29.785 32.966A9 9 0 0 1 20.655 27.371" fill="none" stroke="#155e3d" stroke-width="7.8"/><path d="M30.563 32.863A9 9 0 0 1 20.44 26.781" fill="none" stroke="#a6dfbd" stroke-width="4.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 40 30"><rect width="40" height="30" rx="5" fill="#d9bd6a"/><path d="M0 10h13M0 20h13M27 10h13M27 20h13M13 0v30M27 0v30" fill="none" stroke="#a4863b" stroke-width="1.4"/><rect x="13" y="8" width="14" height="14" rx="3" fill="none" stroke="#a4863b" stroke-width="1.4"/></symbol>
+  <symbol id="i-nfc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.32a7.43 7.43 0 0 1 0 7.36"/><path d="M9.46 6.21a11.76 11.76 0 0 1 0 11.58"/><path d="M12.91 4.1a15.91 15.91 0 0 1 .01 15.8"/><path d="M16.37 2a20.16 20.16 0 0 1 0 20"/></symbol>
+  <symbol id="i-signal" viewBox="0 0 17 11" fill="currentColor"><rect y="7" width="3" height="4" rx="1"/><rect x="4.6" y="5" width="3" height="6" rx="1"/><rect x="9.2" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.8" width="3" height="11" rx="1"/></symbol>
+  <symbol id="i-wifi-ios" viewBox="0 0 15 11" fill="currentColor"><path d="M7.5 2.1c2.3 0 4.4.9 6 2.4l1.2-1.3A10.4 10.4 0 0 0 7.5.3 10.4 10.4 0 0 0 .3 3.2l1.2 1.3a8.6 8.6 0 0 1 6-2.4Z"/><path d="M7.5 5.7c1.3 0 2.5.5 3.4 1.3l1.2-1.3a6.7 6.7 0 0 0-9.2 0L4.1 7c.9-.8 2.1-1.3 3.4-1.3Z"/><path d="M7.5 10.6 9.4 8.6a2.8 2.8 0 0 0-3.8 0Z"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 26 12" fill="currentColor"><rect x=".5" y=".5" width="22" height="11" rx="3.2" fill="none" stroke="currentColor" stroke-opacity=".4"/><rect x="2.2" y="2.2" width="17" height="7.6" rx="1.8"/><path d="M24 4.2v3.6a2 2 0 0 0 0-3.6Z" fill-opacity=".45"/></symbol>
+  <symbol id="i-gplay" viewBox="0 0 24 24"><path d="M3.6 1.8 13.6 12 3.6 22.2c-.4-.3-.6-.8-.6-1.4V3.2c0-.6.2-1.1.6-1.4Z" fill="#00a0ff"/><path d="M3.6 1.8c.5-.3 1.1-.3 1.7 0l11.6 6.7-3.3 3.5Z" fill="#00d26a"/><path d="M16.9 8.5l3.4 2c1.2.7 1.2 2.3 0 3l-3.4 2-3.3-3.5Z" fill="#ffc400"/><path d="M13.6 12l3.3 3.5L5.3 22.2c-.6.3-1.2.3-1.7 0Z" fill="#ff3a44"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9s-2-.9-3.3-.9c-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.2 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.8-4.1zM13.9 5.1c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19c0 .4.4.6.7.4L21 12.4c.3-.2.3-.6 0-.8L4.7 2.1c-.3-.2-.7 0-.7.4z"/></symbol>
+</svg>
+
+<header class="header" data-header>
+  <div class="header__bar wrap">
+    <a class="logo" href="#top" aria-label="Kova, back to top">
+      <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span class="logo__word">kova</span>
+    </a>
+    <nav class="nav" aria-label="Main" data-nav>
+      <span class="nav__pill" aria-hidden="true"></span>
+      <a href="#send">Send home</a>
+      <a href="#app">Wallets</a>
+      <a href="#save">Save</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Members</a>
+      <a href="#faq">Help</a>
+    </nav>
+    <div class="header__right">
+      <button class="login" type="button" data-dialog="login">Log in</button>
+      <button class="btn btn--ink btn--sm" type="button" data-dialog="open">Open an account</button>
+      <button class="burger" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="site-menu" role="dialog" aria-label="Menu" tabindex="-1" data-bp="1023" inert>
+  <nav class="menu__nav" aria-label="Menu">
+    <a href="#send" style="--i:0">Send home</a>
+    <a href="#app" style="--i:1">Wallets</a>
+    <a href="#save" style="--i:2">Save</a>
+    <a href="#pricing" style="--i:3">Pricing</a>
+    <a href="#reviews" style="--i:4">Members</a>
+    <a href="#faq" style="--i:5">Help</a>
+  </nav>
+  <div class="menu__foot">
+    <button class="btn btn--mint" type="button" data-dialog="open">Open an account</button>
+    <button class="btn btn--ghost-light" type="button" data-dialog="login">Log in</button>
+  </div>
+</div>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="hero wrap" id="top" aria-labelledby="hero-title">
+    <div class="hero__copy">
+      <p class="chip" data-intro="1"><span class="chip__dot" aria-hidden="true"></span>New: hold Canadian dollars</p>
+      <h1 id="hero-title" data-intro="2">Two countries. <span class="tone-green">One account.</span></h1>
+      <p class="hero__lede" data-intro="3">Kova gives you one account for every currency you live in. Get paid in pounds, send naira home in seconds and save in dollars, all from your phone.</p>
+      <div class="hero__cta" data-intro="4">
+        <button class="btn btn--ink btn--icon" type="button" data-dialog="open">Open an account in 4 minutes<span class="btn__ic" aria-hidden="true"><svg><use href="#i-arrow-up-right"/></svg></span></button>
+        <a class="btn btn--line" href="#send">See today's rates</a>
+      </div>
+      <div class="hero__trust" data-intro="5">
+        <span class="faces" aria-hidden="true">
+          <img src="assets/photos/avatar-1.webp" width="96" height="96" alt="">
+          <img src="assets/photos/avatar-2.webp" width="96" height="96" alt="">
+          <img src="assets/photos/avatar-3.webp" width="96" height="96" alt="">
+          <img src="assets/photos/avatar-4.webp" width="96" height="96" alt="">
+        </span>
+        <p class="trust"><strong>1.2M members</strong><span>across 34 countries</span></p>
+        <i class="vr" aria-hidden="true"></i>
+        <p class="trust"><strong>4.8 <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></strong><span>from 41,000 app reviews</span></p>
+      </div>
+    </div>
+
+    <div class="hero__stage" data-stage>
+      <div class="hero__photo">
+        <img src="assets/photos/hero.webp" srcset="assets/photos/hero-sm.webp 720w, assets/photos/hero.webp 1120w" sizes="(max-width: 1023px) 100vw, 560px" width="1120" height="1280" alt="A smiling woman with long braids reads good news on her phone." fetchpriority="high" data-intro-zoom>
+      </div>
+
+      <div class="float f-balance" data-intro="4" data-depth="16">
+        <p class="f-balance__label">Total balance</p>
+        <p class="f-balance__big" data-balance>£12,480<span>.20</span></p>
+        <ul class="f-balance__row" aria-label="Quick actions">
+          <li><svg aria-hidden="true"><use href="#i-send"/></svg>Send</li>
+          <li><svg aria-hidden="true"><use href="#i-plus"/></svg>Add</li>
+          <li><svg aria-hidden="true"><use href="#i-swap"/></svg>Convert</li>
+        </ul>
+        <p class="f-balance__wallets"><span class="curs" aria-hidden="true"><i class="cur cur--gbp">£</i><i class="cur cur--ngn">₦</i><i class="cur cur--usd">$</i><i class="cur cur--eur">€</i></span>4 wallets</p>
+      </div>
+
+      <div class="float f-rate" data-intro="5" data-depth="26">
+        <p class="f-rate__label">GBP to NGN today</p>
+        <p class="f-rate__pair"><span data-rate-hero>₦2,069.10</span><span class="f-rate__chg">+0.8%</span></p>
+        <svg class="f-rate__spark" viewBox="0 0 200 50" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 40 L20 34 L40 37 L60 28 L80 30 L100 22 L120 25 L140 15 L160 18 L180 9 L198 6"/></svg>
+        <p class="f-rate__meta"><span>7 days</span><span>No markup</span></p>
+      </div>
+
+      <div class="float f-sent" data-intro="6" data-depth="10">
+        <span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>
+        <p><strong>₦250,000 sent to Mum</strong><span>Arrived in 18 seconds</span></p>
+      </div>
+
+      <div class="float f-goal" data-intro="7" data-depth="20">
+        <svg class="ring" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="25"/><circle class="ring__fill" cx="30" cy="30" r="25" pathLength="100"/><text x="30" y="34.5" text-anchor="middle">72%</text></svg>
+        <p><strong>Lagos trip, December</strong><span>$1,800 of $2,500</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Press -->
+  <section class="press" aria-label="Press coverage">
+    <p class="press__label wrap">As written about in</p>
+    <div class="marquee">
+      <ul class="marquee__track">
+        <li class="p1">The Ledger</li><li class="p2">AFRIQUE DAILY</li><li class="p3">coinage</li><li class="p4">northwind</li><li class="p5">Margin Weekly</li><li class="p2">FINTECH NOW</li><li class="p1">Diaspora Post</li>
+      </ul>
+      <ul class="marquee__track" aria-hidden="true">
+        <li class="p1">The Ledger</li><li class="p2">AFRIQUE DAILY</li><li class="p3">coinage</li><li class="p4">northwind</li><li class="p5">Margin Weekly</li><li class="p2">FINTECH NOW</li><li class="p1">Diaspora Post</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Send home -->
+  <section class="send" id="send" aria-labelledby="send-title">
+    <div class="send__grid wrap">
+      <div class="send__copy" data-rise-children>
+        <p class="eyebrow">Send home</p>
+        <h2 id="send-title" class="h2">Money home in seconds, <span class="tone">not three working days.</span></h2>
+        <p class="lede">Send to any bank or mobile wallet in Nigeria, Ghana, Kenya and 40 more countries at the real exchange rate. One flat fee, shown before you press send.</p>
+        <div class="compare" data-scroll-region role="region" aria-label="Fee comparison">
+          <table>
+            <caption class="sr-only">How much arrives with Kova compared with a bank and a cash transfer shop</caption>
+            <thead><tr><th scope="col" data-compare-title>Sending £500 to Lagos</th><th scope="col">Fee</th><th scope="col">They get</th><th scope="col">Arrives</th></tr></thead>
+            <tbody>
+              <tr class="is-us"><th scope="row"><i class="compare__mark" aria-hidden="true"></i>Kova</th><td data-cmp-fee="0">£0.99</td><td data-cmp-get="0">₦1,034,550</td><td data-cmp-eta>Seconds</td></tr>
+              <tr><th scope="row">High-street bank</th><td>£15.00</td><td data-cmp-get="1">₦968,297</td><td>2 to 3 days</td></tr>
+              <tr><th scope="row">Cash transfer shop</th><td>£4.90</td><td data-cmp-get="2">₦993,168</td><td>Same day</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <form class="conv" data-converter aria-labelledby="conv-title" data-rise>
+        <h3 id="conv-title">Send money</h3>
+        <div class="seg" role="group" aria-label="How they receive it">
+          <button type="button" data-method="bank" aria-pressed="true">To a bank</button>
+          <button type="button" data-method="wallet" aria-pressed="false">To a wallet</button>
+          <button type="button" data-method="cash" aria-pressed="false">Cash pickup</button>
+        </div>
+        <div class="field">
+          <label for="amt-send">You send</label>
+          <input id="amt-send" name="send" inputmode="decimal" autocomplete="off" value="500.00" data-amt="send">
+          <span class="field__cur"><i class="cur cur--gbp" aria-hidden="true">£</i>GBP</span>
+        </div>
+        <span class="swap" aria-hidden="true" data-swap><svg><use href="#i-swap"/></svg></span>
+        <div class="field">
+          <label for="amt-get">Mum gets</label>
+          <input id="amt-get" name="get" inputmode="decimal" autocomplete="off" value="1,034,550" data-amt="get">
+          <label class="field__cur field__cur--select"><span class="sr-only">Currency Mum receives</span><i class="cur cur--ngn" aria-hidden="true" data-to-badge>₦</i><select data-to><option value="NGN">NGN</option><option value="GHS">GHS</option><option value="KES">KES</option></select></label>
+        </div>
+        <dl class="conv__lines">
+          <div><dt>Exchange rate</dt><dd data-rate-line>£1 = ₦2,069.10</dd></div>
+          <div><dt>Our fee</dt><dd data-fee>£0.99</dd></div>
+          <div><dt>Arrives</dt><dd class="up" data-eta>In seconds</dd></div>
+        </dl>
+        <button class="btn btn--green btn--block" type="button" data-dialog="send" data-send-total>Send £500.99<svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></button>
+        <p class="conv__note">Live demo with sample rates. Nothing is sent.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="sec wrap" id="app" aria-labelledby="app-title">
+    <div class="sec__head" data-rise-children>
+      <div><p class="eyebrow">One app</p><h2 id="app-title" class="h2">Everything both your lives <span class="tone">need from a bank.</span></h2></div>
+      <p class="lede">Wallets, cards, savings and bills for home and abroad, without juggling three banking apps and a spreadsheet.</p>
+    </div>
+    <div class="bento" data-rise-children>
+      <article class="b b1">
+        <h3>A wallet for every currency</h3>
+        <p>Open a pound, naira, dollar, euro or Canadian dollar wallet in a tap, each with its own account details.</p>
+        <ul class="wallets">
+          <li><i class="cur cur--gbp" aria-hidden="true">£</i><span><strong>British pound</strong><small>Sort code 04-00-75</small></span><b>£4,210.55</b></li>
+          <li><i class="cur cur--ngn" aria-hidden="true">₦</i><span><strong>Nigerian naira</strong><small>Account 0123 4567 89</small></span><b>₦862,400</b></li>
+          <li><i class="cur cur--usd" aria-hidden="true">$</i><span><strong>US dollar</strong><small>Routing 026 073 150</small></span><b>$3,980.00</b></li>
+          <li><i class="cur cur--eur" aria-hidden="true">€</i><span><strong>Euro</strong><small>IBAN GB29 KOVA 6016</small></span><b>€640.10</b></li>
+          <li><i class="cur cur--cad" aria-hidden="true">C$</i><span><strong>Canadian dollar <b class="new">New</b></strong><small>Transit 00012</small></span><b>C$1,240.00</b></li>
+        </ul>
+        <button class="wallets__add" type="button" data-dialog="wallet"><svg aria-hidden="true"><use href="#i-plus"/></svg>Add a wallet</button>
+      </article>
+      <article class="b b2">
+        <div class="cards3" aria-hidden="true">
+          <div class="vcard vcard--ink vc-back"><svg class="vcard__art" viewBox="0 0 100 60"><circle cx="42" cy="30" r="24"/><circle cx="72" cy="30" r="24"/></svg><span class="vcard__in"><span class="vcard__top"><b class="vcard__brand">kova</b><span class="vcard__tier">METAL</span></span><span class="vcard__mid"><svg class="vcard__chip" viewBox="0 0 40 30"><use href="#i-chip"/></svg><svg class="vcard__nfc"><use href="#i-nfc"/></svg></span><span class="vcard__num">5412 7534 0091 8812</span><span class="vcard__bot"><span class="vcard__name">ADAEZE OKAFOR</span><span class="vcard__exp"><small>VALID<br>THRU</small>11/31</span><b class="vcard__net">DEBIT</b></span></span></div>
+          <div class="vcard vcard--green vc-front"><svg class="vcard__art" viewBox="0 0 100 60"><circle cx="42" cy="30" r="24"/><circle cx="72" cy="30" r="24"/></svg><span class="vcard__in"><span class="vcard__top"><b class="vcard__brand">kova</b><span class="vcard__tier">VIRTUAL</span></span><span class="vcard__mid"><svg class="vcard__chip" viewBox="0 0 40 30"><use href="#i-chip"/></svg><svg class="vcard__nfc"><use href="#i-nfc"/></svg></span><span class="vcard__num">4921 0388 7716 4021</span><span class="vcard__bot"><span class="vcard__name">ADAEZE OKAFOR</span><span class="vcard__exp"><small>VALID<br>THRU</small>02/28</span><b class="vcard__net">DEBIT</b></span></span></div>
+        </div>
+        <div class="b2__txt"><h3>Cards that spend like a local</h3><p>Pay in any currency at the real rate. Freeze, unfreeze or make a one-time virtual card in a second.</p></div>
+      </article>
+      <article class="b b3">
+        <h3>Savings pots</h3>
+        <ul class="pots">
+          <li><span class="pots__ic" aria-hidden="true"><svg><use href="#i-plane"/></svg></span><span class="pots__bar"><span>Trip home <b>72%</b></span><i style="--w:.72"></i></span></li>
+          <li><span class="pots__ic" aria-hidden="true"><svg><use href="#i-home"/></svg></span><span class="pots__bar"><span>House deposit <b>38%</b></span><i style="--w:.38"></i></span></li>
+          <li><span class="pots__ic" aria-hidden="true"><svg><use href="#i-grad"/></svg></span><span class="pots__bar"><span>School fees <b>91%</b></span><i style="--w:.91"></i></span></li>
+        </ul>
+      </article>
+      <article class="b b4">
+        <h3>Locked to you</h3>
+        <span class="faceid" aria-hidden="true"><svg><use href="#i-scan"/></svg><i></i></span>
+        <p>Face ID on every payment.</p>
+      </article>
+      <article class="b b5">
+        <h3>Pay bills back home</h3>
+        <p>Electricity, school fees and data top-ups in Lagos, paid from London.</p>
+        <ul class="bills">
+          <li class="is-due"><span class="bills__ic" aria-hidden="true"><svg><use href="#i-bulb"/></svg></span><strong>₦45,000</strong><span>Electricity, due Friday</span></li>
+          <li><span class="bills__ic" aria-hidden="true"><svg><use href="#i-grad"/></svg></span><strong>₦310,000</strong><span>School fees, paid</span></li>
+          <li><span class="bills__ic" aria-hidden="true"><svg><use href="#i-wifi"/></svg></span><strong>₦12,500</strong><span>Home internet, paid</span></li>
+        </ul>
+      </article>
+      <article class="b b6">
+        <div class="b6__head">
+          <div><h3>Know where it goes</h3><p>Spending in every currency, shown in one.</p></div>
+          <p class="b6__total"><strong>£2,384</strong><span class="up">12% less than October</span></p>
+        </div>
+        <ol class="chart" aria-label="Spending this week">
+          <li style="--h:.46"><span class="chart__bar"></span><span class="chart__day">Mon</span><span class="chart__val">£280</span></li>
+          <li style="--h:.62"><span class="chart__bar"></span><span class="chart__day">Tue</span><span class="chart__val">£377</span></li>
+          <li style="--h:.38"><span class="chart__bar"></span><span class="chart__day">Wed</span><span class="chart__val">£231</span></li>
+          <li style="--h:.74"><span class="chart__bar"></span><span class="chart__day">Thu</span><span class="chart__val">£450</span></li>
+          <li style="--h:1" class="is-hi"><span class="chart__bar"></span><span class="chart__day">Fri</span><span class="chart__val">£612</span></li>
+          <li style="--h:.52"><span class="chart__bar"></span><span class="chart__day">Sat</span><span class="chart__val">£316</span></li>
+          <li style="--h:.40"><span class="chart__bar"></span><span class="chart__day">Sun</span><span class="chart__val">£118</span></li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <!-- Savings -->
+  <section class="save wrap" id="save" aria-labelledby="save-title">
+    <div class="save__photo" data-zoom data-rise>
+      <img src="assets/photos/save.webp" width="1200" height="1240" loading="lazy" decoding="async" alt="A woman with curly hair in a rust-coloured shirt holds her phone against a terracotta wall.">
+      <p class="save__earned"><span><small>Earned this year</small><strong>$412.36</strong></span><span class="chip chip--green">+ $1.18 today</span></p>
+    </div>
+    <div class="save__panel" data-rise>
+      <p class="eyebrow">Save in dollars</p>
+      <h2 id="save-title" class="h2">Savings that <span class="tone">hold their value.</span></h2>
+      <p class="lede">Move money into a dollar savings pot and earn interest every day. Take it out whenever you like, with no notice period.</p>
+      <p class="apy"><strong>4.6%</strong><span>AER, variable,<br>paid daily</span></p>
+      <div class="calc" data-calc>
+        <div class="calc__lbl"><label for="save-amt">If you save each month</label><output for="save-amt" data-calc-out>$400</output></div>
+        <span class="range-wrap"><span class="range-wrap__track" aria-hidden="true"><i></i></span><input class="range" id="save-amt" type="range" min="50" max="2000" step="50" value="400" aria-valuetext="$400 a month" data-calc-input></span>
+        <dl class="calc__proj" aria-live="polite">
+          <div><dt>1 year</dt><dd data-years="1">$4,900</dd></div>
+          <div><dt>3 years</dt><dd data-years="3">$15,390</dd></div>
+          <div><dt>5 years</dt><dd data-years="5">$26,860</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="steps sec wrap" id="how" aria-labelledby="how-title">
+    <div class="steps__head" data-rise-children>
+      <p class="eyebrow">Get started</p>
+      <h2 id="how-title" class="h2">From download to first transfer <span class="tone">in four minutes.</span></h2>
+    </div>
+    <ol class="steps__row" data-rise-children>
+      <li class="step">
+        <span class="step__n">01</span><h3>Tell us who you are</h3><p>Your name, address and a photo of your passport or residence permit. No branch visit.</p>
+        <div class="phone" aria-hidden="true"><div class="screen"><span class="sbar" aria-hidden="true"><b>9:41</b><span class="sbar__island"></span><span class="sbar__ic"><svg class="sbar__sig"><use href="#i-signal"/></svg><svg class="sbar__wifi"><use href="#i-wifi-ios"/></svg><svg class="sbar__bat"><use href="#i-battery"/></svg></span></span><b class="screen__h">Your details</b><span class="screen__m">Step 1 of 3</span><span class="inp">Full name<b>Adaeze Okafor<i class="caret"></i></b></span><span class="inp">Home address<b>14 Albion Road, London</b></span><span class="sbtn">Continue</span></div></div>
+      </li>
+      <li class="step">
+        <span class="step__n">02</span><h3>Scan your face</h3><p>A three-second selfie check confirms it's really you, and it locks the app to your face.</p>
+        <div class="phone" aria-hidden="true"><div class="screen screen--center"><span class="sbar" aria-hidden="true"><b>9:41</b><span class="sbar__island"></span><span class="sbar__ic"><svg class="sbar__sig"><use href="#i-signal"/></svg><svg class="sbar__wifi"><use href="#i-wifi-ios"/></svg><svg class="sbar__bat"><use href="#i-battery"/></svg></span></span><b class="screen__h">Look at the camera</b><span class="screen__m">Hold still for a moment</span><span class="faceid faceid--light"><svg><use href="#i-scan"/></svg><i></i></span><span class="screen__m">Checking</span></div></div>
+      </li>
+      <li class="step">
+        <span class="step__n">03</span><h3>Add money and send</h3><p>Top up by card or bank transfer, open your naira wallet and send your first payment home.</p>
+        <div class="phone" aria-hidden="true"><div class="screen"><span class="sbar" aria-hidden="true"><b>9:41</b><span class="sbar__island"></span><span class="sbar__ic"><svg class="sbar__sig"><use href="#i-signal"/></svg><svg class="sbar__wifi"><use href="#i-wifi-ios"/></svg><svg class="sbar__bat"><use href="#i-battery"/></svg></span></span><b class="screen__h">You're all set</b><span class="screen__m">Your wallets are ready</span><span class="mini"><i class="cur cur--gbp">£</i>Pounds<b>£250.00</b></span><span class="mini"><i class="cur cur--ngn">₦</i>Naira<b>₦0.00</b></span><span class="sbtn sbtn--green">Send money home</span></div></div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Pricing -->
+  <section class="sec wrap" id="pricing" aria-labelledby="pricing-title">
+    <div class="sec__head" data-rise-children>
+      <div><p class="eyebrow">Plans</p><h2 id="pricing-title" class="h2">Free to start. <span class="tone">Upgrade when it pays.</span></h2></div>
+      <div class="sec__aside">
+        <p class="lede">Every plan includes all five wallets, Face ID payments and real exchange rates. Cancel or switch any month.</p>
+        <button class="billing" type="button" role="switch" aria-checked="false" data-billing><span class="billing__opt">Monthly</span><span class="billing__track" aria-hidden="true"><i></i></span><span class="billing__opt">Yearly <b>2 months free</b></span></button>
+      </div>
+    </div>
+    <div class="plans" data-rise-children>
+      <article class="plan">
+        <div class="vcard vcard--sand" aria-hidden="true"><svg class="vcard__art" viewBox="0 0 100 60"><circle cx="42" cy="30" r="24"/><circle cx="72" cy="30" r="24"/></svg><span class="vcard__in"><span class="vcard__top"><b class="vcard__brand">kova</b><span class="vcard__tier">EVERYDAY</span></span><span class="vcard__mid"><svg class="vcard__chip" viewBox="0 0 40 30"><use href="#i-chip"/></svg><svg class="vcard__nfc"><use href="#i-nfc"/></svg></span><span class="vcard__num">5412 7534 6620 1180</span><span class="vcard__bot"><span class="vcard__name">KUNLE ADEBAYO</span><span class="vcard__exp"><small>VALID<br>THRU</small>06/30</span><b class="vcard__net">DEBIT</b></span></span></div>
+        <h3>Everyday</h3>
+        <p class="plan__price"><strong data-month="£0" data-year="£0">£0</strong><span data-month="/ month" data-year="/ year">/ month</span></p>
+        <ul class="ticks"><li><svg aria-hidden="true"><use href="#i-check"/></svg>£0.99 transfers home</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Spend abroad with no fees</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>3.1% AER on dollar savings</li></ul>
+        <button class="btn btn--line btn--block" type="button" data-dialog="open">Open for free</button>
+      </article>
+      <article class="plan plan--hot">
+        <div class="vcard vcard--green" aria-hidden="true"><svg class="vcard__art" viewBox="0 0 100 60"><circle cx="42" cy="30" r="24"/><circle cx="72" cy="30" r="24"/></svg><span class="vcard__in"><span class="vcard__top"><b class="vcard__brand">kova</b><span class="vcard__tier">PLUS</span></span><span class="vcard__mid"><svg class="vcard__chip" viewBox="0 0 40 30"><use href="#i-chip"/></svg><svg class="vcard__nfc"><use href="#i-nfc"/></svg></span><span class="vcard__num">5412 7534 9021 4021</span><span class="vcard__bot"><span class="vcard__name">AMA OWUSU</span><span class="vcard__exp"><small>VALID<br>THRU</small>09/30</span><b class="vcard__net">DEBIT</b></span></span></div>
+        <h3>Plus <span class="plan__tag">Most chosen</span></h3>
+        <p class="plan__price"><strong data-month="£4.99" data-year="£49.90">£4.99</strong><span data-month="/ month" data-year="/ year">/ month</span></p>
+        <ul class="ticks"><li><svg aria-hidden="true"><use href="#i-check"/></svg>10 free transfers home a month</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>4.6% AER on dollar savings</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Bill pay in 12 countries</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Priority chat support</li></ul>
+        <button class="btn btn--mint btn--block" type="button" data-dialog="plan-plus">Try Plus free for a month</button>
+      </article>
+      <article class="plan">
+        <div class="vcard vcard--metal" aria-hidden="true"><svg class="vcard__art" viewBox="0 0 100 60"><circle cx="42" cy="30" r="24"/><circle cx="72" cy="30" r="24"/></svg><span class="vcard__in"><span class="vcard__top"><b class="vcard__brand">kova</b><span class="vcard__tier">FAMILY</span></span><span class="vcard__mid"><svg class="vcard__chip" viewBox="0 0 40 30"><use href="#i-chip"/></svg><svg class="vcard__nfc"><use href="#i-nfc"/></svg></span><span class="vcard__num">5412 7534 3307 8812</span><span class="vcard__bot"><span class="vcard__name">THE OKAFORS</span><span class="vcard__exp"><small>VALID<br>THRU</small>11/31</span><b class="vcard__net">DEBIT</b></span></span></div>
+        <h3>Family</h3>
+        <p class="plan__price"><strong data-month="£9.99" data-year="£99.90">£9.99</strong><span data-month="/ month" data-year="/ year">/ month</span></p>
+        <ul class="ticks"><li><svg aria-hidden="true"><use href="#i-check"/></svg>Up to 5 members, home and abroad</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Unlimited free transfers</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Shared pots for school fees</li></ul>
+        <button class="btn btn--line btn--block" type="button" data-dialog="plan-family">Choose Family</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Members -->
+  <section class="sec wrap" id="reviews" aria-labelledby="reviews-title">
+    <div class="sec__head" data-rise-children>
+      <div><p class="eyebrow">Members</p><h2 id="reviews-title" class="h2">Loved by people <span class="tone">who live between places.</span></h2></div>
+    </div>
+    <div class="reviews" data-rise-children>
+      <div class="score">
+        <p class="score__num">4.8</p>
+        <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+        <p class="sr-only">Rated 4.8 out of 5.</p>
+        <blockquote class="score__quote"><p>"The first bank that understands half my life is in Lagos."</p></blockquote>
+        <p class="score__src">Average of 41,000 reviews on iOS and Android</p>
+      </div>
+      <figure class="rev">
+        <div class="rev__ph" data-zoom><img src="assets/photos/review-1.webp" width="880" height="560" loading="lazy" decoding="async" alt="Kunle, smiling in a brown jacket on a brick-lined street, holding his phone."><span class="chip">Sends home monthly</span></div>
+        <blockquote><p>"I used to lose a day's pay every month on fees. Now Mum gets the money before I've put my phone away."</p></blockquote>
+        <figcaption><strong>Kunle A.</strong> Nurse, Manchester</figcaption>
+      </figure>
+      <figure class="rev">
+        <div class="rev__ph" data-zoom><img src="assets/photos/review-2.webp" width="880" height="1320" loading="lazy" decoding="async" alt="Ama, smiling in a white blouse with her arms folded, in a warmly lit room."><span class="chip">Saves in dollars</span></div>
+        <blockquote><p>"My salary comes in pounds and my plans are in naira. Kova is the only app where both make sense."</p></blockquote>
+        <figcaption><strong>Ama O.</strong> Product designer, Toronto</figcaption>
+      </figure>
+    </div>
+
+    <ul class="secure" data-rise-children>
+      <li><span class="secure__ic" aria-hidden="true"><svg><use href="#i-shield"/></svg></span><span><strong>Protected up to £85,000</strong>Held with a regulated partner bank</span></li>
+      <li><span class="secure__ic" aria-hidden="true"><svg><use href="#i-lock"/></svg></span><span><strong>Freeze in one tap</strong>Lost your card? Lock it instantly</span></li>
+      <li><span class="secure__ic" aria-hidden="true"><svg><use href="#i-scan"/></svg></span><span><strong>Face ID payments</strong>Nothing moves without you</span></li>
+      <li><span class="secure__ic" aria-hidden="true"><svg><use href="#i-zap"/></svg></span><span><strong>Real people, 24/7</strong>Replies in under 3 minutes</span></li>
+    </ul>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq sec wrap" id="faq" aria-labelledby="faq-title">
+    <div class="faq__intro" data-rise-children>
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-title" class="h2">Good to know <span class="tone">before you join.</span></h2>
+      <p class="lede">Can't find your answer? Our team replies in the app any time, day or night.</p>
+    </div>
+    <div class="faq__list" data-rise-children>
+      <details class="qa" open><summary>How fast does money arrive in Nigeria?<span class="qa__ic" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><p>Most transfers to Nigerian banks and mobile wallets land in under a minute. A small number are checked by our team first, which can take up to two hours.</p></details>
+      <details class="qa"><summary>What do I need to open an account?<span class="qa__ic" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><p>A passport or national ID, proof of where you live now, and a phone that can take a selfie. Most people are done in about four minutes.</p></details>
+      <details class="qa"><summary>Is my money protected?<span class="qa__ic" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><p>In this concept, balances would be held with a regulated partner bank and protected up to £85,000. Kova itself is a fictional brand.</p></details>
+      <details class="qa"><summary>Can I get paid into my pound wallet?<span class="qa__ic" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><p>Yes. Your pound wallet has its own sort code and account number, so you can give it to your employer like any UK account.</p></details>
+      <details class="qa"><summary>Which countries can I send to?<span class="qa__ic" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary><p>Nigeria, Ghana, Kenya, South Africa, India, the Philippines and 37 more. The app shows the speed and fee for each before you send.</p></details>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="cta wrap" aria-labelledby="cta-title">
+    <div class="cta__copy" data-rise-children>
+      <h2 id="cta-title">Open Kova <span>in four minutes.</span></h2>
+      <p>Download the app, scan your passport and your wallets are ready. Your first transfer home is on us.</p>
+      <div class="stores">
+        <button class="store" type="button" data-dialog="app"><svg aria-hidden="true"><use href="#i-apple"/></svg><span>Download on the<b>App Store</b></span></button>
+        <button class="store" type="button" data-dialog="app"><svg aria-hidden="true"><use href="#i-gplay"/></svg><span>Get it on<b>Google Play</b></span></button>
+      </div>
+    </div>
+    <div class="cta__phone" aria-hidden="true">
+      <div class="phone phone--big"><div class="screen">
+        <span class="sbar" aria-hidden="true"><b>9:41</b><span class="sbar__island"></span><span class="sbar__ic"><svg class="sbar__sig"><use href="#i-signal"/></svg><svg class="sbar__wifi"><use href="#i-wifi-ios"/></svg><svg class="sbar__bat"><use href="#i-battery"/></svg></span></span><span class="screen__m">Good morning, Adaeze</span><b class="screen__big">£12,480.20</b>
+        <ul class="tx" data-rise-children>
+          <li><i class="cur cur--ngn">₦</i><span>To Mum<small>Today, 08:14</small></span><b>-£120.00</b></li>
+          <li><i class="cur cur--gbp">£</i><span>Salary, NHS Trust<small>Yesterday</small></span><b class="up">+£2,840.00</b></li>
+          <li><i class="cur cur--usd">$</i><span>Dollar savings<small>Monday, interest</small></span><b class="up">+$1.18</b></li>
+          <li><i class="cur cur--ngn">₦</i><span>Electricity, Lekki<small>Sunday</small></span><b>-₦45,000</b></li>
+        </ul>
+      </div></div>
+      <div class="float f-free"><span class="tick"><svg><use href="#i-check"/></svg></span><p><strong>First transfer free</strong><span>For new members</span></p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <a class="logo logo--light" href="#top" aria-label="Kova, back to top"><svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#logo-mark"/></svg><span class="logo__word">kova</span></a>
+        <p>One account for people who live between countries. Kova is a concept brand; banking services would be provided by a regulated partner bank.</p>
+      </div>
+      <nav class="footer__col" aria-label="Personal"><h2>Personal</h2><ul><li><a href="#app">Wallets</a></li><li><a href="#send">Send home</a></li><li><a href="#save">Savings</a></li><li><a href="#pricing">Cards and plans</a></li></ul></nav>
+      <nav class="footer__col" aria-label="Company"><h2>Company</h2><ul><li><button type="button" data-dialog="about">About</button></li><li><button type="button" data-dialog="careers">Careers</button></li><li><button type="button" data-dialog="press">Press</button></li></ul></nav>
+      <nav class="footer__col" aria-label="Help"><h2>Help</h2><ul><li><a href="#faq">Questions</a></li><li><button type="button" data-dialog="fees">Fees</button></li><li><button type="button" data-dialog="security">Security</button></li></ul></nav>
+      <form class="alerts" data-newsletter data-thanks="Done. On a live site you would get a message when the pound hits your rate. Nothing was sent." aria-labelledby="alerts-title">
+        <h2 id="alerts-title">Rate alerts</h2>
+        <p>Get a message when the pound hits your rate.</p>
+        <div class="alerts__row">
+          <label class="sr-only" for="alert-email">Email address</label>
+          <input id="alert-email" type="email" name="email" autocomplete="email" placeholder="you@email.com" required>
+          <button class="btn btn--green" type="submit">Notify me</button>
+        </div>
+        <p class="alerts__msg" data-newsletter-msg aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="footer__legal">
+      <p>© <span data-current-year>2026</span> Kova. A design concept: no accounts, payments or transfers are real.</p>
+      <ul><li><button type="button" data-dialog="privacy">Privacy</button></li><li><button type="button" data-dialog="terms">Terms</button></li><li><button type="button" data-dialog="cookies">Cookies</button></li></ul>
+    </div>
+  </div>
+  <p class="footer__word" aria-hidden="true" data-fit><span data-word>kova</span></p>
+</footer>
+
+<dialog class="dialog" id="site-dialog" aria-labelledby="dlg-title">
+  <button class="dialog__close" type="button" data-dialog-close aria-label="Close"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  <p class="eyebrow" data-dialog-eyebrow></p>
+  <h2 id="dlg-title" data-dialog-title></h2>
+  <p class="dialog__body" data-dialog-body></p>
+  <form class="dialog__form" data-dialog-form hidden>
+    <label>Your name<input name="name" autocomplete="name" required maxlength="80"></label>
+    <label>Email<input name="email" type="email" autocomplete="email" required></label>
+    <label>Where do you live now?<select name="country"><option>United Kingdom</option><option>Canada</option><option>United States</option><option>Ireland</option><option>Germany</option></select></label>
+    <button class="btn btn--ink" type="submit">Preview my account</button>
+    <small>This is a concept site: nothing is sent and your details are cleared when you close this window.</small>
+  </form>
+  <div class="dialog__success" data-dialog-success hidden>
+    <p data-dialog-summary></p>
+    <button class="btn btn--ink" type="button" data-dialog-close>Done</button>
+  </div>
+</dialog>
+
+<script>
+  window.SITE = {
+    summary: function (d) { return d.name + ', your ' + d.subject + ' preview is ready. This is a demo, so nothing was sent and no account was opened.'; },
+    dialogs: {
+      open: { eyebrow: 'Four minutes', title: 'Open your Kova account', subject: 'account', body: 'Tell us who you are and where you live now. In the app you would then scan your passport and your face.', form: true },
+      login: { eyebrow: 'Members', title: 'Log in', body: 'Kova is a concept brand, so there are no accounts to log in to.' },
+      send: { eyebrow: 'Send money', title: 'Ready to send', subject: 'transfer', body: 'On the live app you would confirm this transfer with Face ID. Here, leave your details to preview the flow.', form: true },
+      wallet: { eyebrow: 'Wallets', title: 'Add a wallet', body: 'Pick from pounds, naira, US dollars, euros and Canadian dollars. Each comes with its own account details. Wallets are not part of this concept page.' },
+      'plan-plus': { eyebrow: 'Plus, £4.99 a month', title: 'Try Plus free for a month', subject: 'Plus plan', body: 'Ten free transfers home a month, 4.6% AER on dollar savings and bill pay in 12 countries. Cancel any time.', form: true },
+      'plan-family': { eyebrow: 'Family, £9.99 a month', title: 'Choose Family', subject: 'Family plan', body: 'Up to five members at home and abroad, unlimited free transfers and shared pots.', form: true },
+      app: { eyebrow: 'The app', title: 'Get Kova on your phone', body: 'Kova is a concept brand, so it is not in any app store.' },
+      about: { eyebrow: 'Company', title: 'About Kova', body: 'Kova is a fictional bank designed for people who live between two countries.' },
+      careers: { eyebrow: 'Company', title: 'Careers', body: 'Kova is a concept brand, so there are no open roles.' },
+      press: { eyebrow: 'Company', title: 'Press', body: 'The publications named on this page are invented.' },
+      fees: { eyebrow: 'Help', title: 'Fees', body: 'In this concept, transfers home cost a flat £0.99 at the real exchange rate. Cash pickup costs £1.99.' },
+      security: { eyebrow: 'Help', title: 'Security', body: 'Face ID on every payment, one-tap card freezing and balances held with a regulated partner bank. This is a concept page.' },
+      privacy: { eyebrow: 'Legal', title: 'Privacy', body: 'This page uses no analytics or tracking cookies. Form details stay in your browser and are cleared when the window closes.' },
+      terms: { eyebrow: 'Legal', title: 'Terms', body: 'This is a concept landing page for a fictional bank. No accounts, payments or transfers are processed.' },
+      cookies: { eyebrow: 'Legal', title: 'Cookies', body: 'This page sets no cookies.' }
+    }
+  };
+</script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/site-core.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
